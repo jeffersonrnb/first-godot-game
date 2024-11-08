@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hu3irffm8s5n"
-path="res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"
+uid="uid://dr762d2pbat81"
+path="res://.godot/imported/YouWin1.png-9245c0e4f375b51a3853e4ff93687a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png"
-dest_files=["res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"]
+source_file="res://assets/Splashscreens/YouWin1.png"
+dest_files=["res://.godot/imported/YouWin1.png-9245c0e4f375b51a3853e4ff93687a8f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hu3irffm8s5n"
-path="res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"
+uid="uid://by6j0mbgrrwfg"
+path="res://.godot/imported/GameOver1.png-b0f49d6bb0d25d88b49d9e9d016bbfe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png"
-dest_files=["res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"]
+source_file="res://assets/Splashscreens/GameOver1.png"
+dest_files=["res://.godot/imported/GameOver1.png-b0f49d6bb0d25d88b49d9e9d016bbfe2.ctex"]
 
 [params]
 

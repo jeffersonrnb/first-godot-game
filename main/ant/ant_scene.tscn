@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main/ant/ant_area_2d.gd" id="1_c364h"]
 [ext_resource type="Script" path="res://main/ant/ant_scene.gd" id="1_dk577"]
-[ext_resource type="Texture2D" uid="uid://hu3irffm8s5n" path="res://assets/PNG_Parts&Spriter_Animation/Ant1/ant1.png" id="1_wuq4r"]
+[ext_resource type="Texture2D" uid="uid://hu3irffm8s5n" path="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png" id="1_wuq4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q144y"]
 size = Vector2(33, 45)
@@ -25,3 +25,4 @@ position = Vector2(0.592499, -0.00250244)
 shape = SubResource("RectangleShape2D_q144y")
 
 [connection signal="area_entered" from="AntArea2D" to="AntArea2D" method="_on_area_entered"]
+[connection signal="area_exited" from="AntArea2D" to="AntArea2D" method="_on_area_exited"]

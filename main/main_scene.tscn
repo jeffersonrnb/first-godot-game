@@ -1,12 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://baoa1jmiipvv3"]
+[gd_scene load_steps=8 format=3 uid="uid://baoa1jmiipvv3"]
 
 [ext_resource type="PackedScene" uid="uid://bs8djgd8a2yfu" path="res://main/background/background_scene.tscn" id="1_bho8x"]
 [ext_resource type="Script" path="res://main/main_scene.gd" id="1_wgcya"]
-[ext_resource type="PackedScene" uid="uid://d0gs461m85qc8" path="res://main/ant/ant_scene.tscn" id="2_vict7"]
+[ext_resource type="PackedScene" uid="uid://byhhtfv3rcvq7" path="res://main/ant_player/ant_player.tscn" id="4_d852x"]
+[ext_resource type="PackedScene" uid="uid://dx37a6pgqteir" path="res://main/sugar_cube/sugar_cube_area_2d.tscn" id="4_vo8av"]
+[ext_resource type="PackedScene" uid="uid://kpdjh3ldqghq" path="res://main/game_over/game_over_scene.tscn" id="5_c0isq"]
+[ext_resource type="FontFile" uid="uid://bq16ran57yq0c" path="res://assets/Fonts/Mario-Kart-DS.ttf" id="5_yynja"]
+[ext_resource type="PackedScene" uid="uid://djyw5crca8j8p" path="res://main/you_win/you_win_scene.tscn" id="7_c6ghs"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_wgcya")
 
 [node name="BackgroundScene" parent="." instance=ExtResource("1_bho8x")]
 
-[node name="AntScene" parent="." instance=ExtResource("2_vict7")]
+[node name="AntPlayer" parent="." instance=ExtResource("4_d852x")]
+position = Vector2(512, 398)
+
+[node name="SugarCubeArea2D" parent="." instance=ExtResource("4_vo8av")]
+position = Vector2(692, 405)
+
+[node name="LabelPoints" type="Label" parent="."]
+offset_left = 753.0
+offset_top = 2.0
+offset_right = 1020.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("5_yynja")
+theme_override_font_sizes/font_size = 50
+text = "Pontos: 0"
+
+[node name="LabelTimer" type="Label" parent="."]
+offset_left = 25.0
+offset_right = 259.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("5_yynja")
+theme_override_font_sizes/font_size = 50
+text = "Tempo: "
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="GameOverScene" parent="." instance=ExtResource("5_c0isq")]
+visible = false
+
+[node name="YouWinScene" parent="." instance=ExtResource("7_c6ghs")]
+visible = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -17,10 +17,15 @@ config/icon="res://icon.svg"
 run/size/borderless=false
 run/size/resizable=true
 
+[autoload]
+
+Globals="*res://singletons/globals.gd"
+
 [display]
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
+window/size/resizable=false
 
 [rendering]
 

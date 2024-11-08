@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hu3irffm8s5n"
-path="res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"
+uid="uid://bbgohab7xt7td"
+path="res://.godot/imported/SugarCube1.png-f71b55b047b5ac4f07b68f6592cbb921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png"
-dest_files=["res://.godot/imported/Ant1.png-7e4da94296f074c338ee53adebb21996.ctex"]
+source_file="res://assets/PNG_Parts&Spriter_Animation/SugarCube1/SugarCube1.png"
+dest_files=["res://.godot/imported/SugarCube1.png-f71b55b047b5ac4f07b68f6592cbb921.ctex"]
 
 [params]
 

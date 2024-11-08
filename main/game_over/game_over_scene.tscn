@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://kpdjh3ldqghq"]
+
+[ext_resource type="Script" path="res://main/game_over/game_over_scene.gd" id="1_cnl76"]
+[ext_resource type="Texture2D" uid="uid://by6j0mbgrrwfg" path="res://assets/Splashscreens/GameOver1.png" id="1_wi17y"]
+[ext_resource type="FontFile" uid="uid://bq16ran57yq0c" path="res://assets/Fonts/Mario-Kart-DS.ttf" id="2_4l1ao"]
+
+[node name="GameOverScene" type="Node2D"]
+script = ExtResource("1_cnl76")
+
+[node name="GameOverSprite" type="Sprite2D" parent="."]
+position = Vector2(513, 385)
+texture = ExtResource("1_wi17y")
+
+[node name="LabelGameOver" type="RichTextLabel" parent="."]
+offset_left = 167.0
+offset_top = 288.0
+offset_right = 1066.0
+offset_bottom = 579.0
+theme_override_fonts/normal_font = ExtResource("2_4l1ao")
+theme_override_font_sizes/normal_font_size = 150
+text = "Game Over"
+
+[node name="TryAgainButton" type="Button" parent="."]
+offset_left = 382.0
+offset_top = 598.0
+offset_right = 690.0
+offset_bottom = 670.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_4l1ao")
+theme_override_font_sizes/font_size = 50
+text = "Try Again"
+
+[connection signal="pressed" from="TryAgainButton" to="." method="_on_try_again_button_pressed"]

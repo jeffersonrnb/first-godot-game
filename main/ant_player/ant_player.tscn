@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://byhhtfv3rcvq7"]
+
+[ext_resource type="Script" path="res://main/ant_player/ant_player.gd" id="1_2nlo7"]
+[ext_resource type="Texture2D" uid="uid://hu3irffm8s5n" path="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png" id="1_pajrw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbibd"]
+size = Vector2(31, 25)
+
+[node name="AntPlayer" type="CharacterBody2D"]
+position = Vector2(493, 313)
+input_pickable = true
+script = ExtResource("1_2nlo7")
+
+[node name="AntPlayerShape" type="Node2D" parent="."]
+
+[node name="AntPlayerSprite" type="Sprite2D" parent="AntPlayerShape"]
+rotation = 1.5708
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_pajrw")
+
+[node name="CollisionAntPlayer" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_pbibd")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -1,25 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://bs8djgd8a2yfu"]
+[gd_scene load_steps=8 format=3 uid="uid://bs8djgd8a2yfu"]
 
 [ext_resource type="Texture2D" uid="uid://br05e425mp5md" path="res://assets/PNG_Parts&Spriter_Animation/Labyrinths/Lab4/Lab4.png" id="1_fisyn"]
 [ext_resource type="Script" path="res://main/background/background_scene.gd" id="1_rhn7e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_djscb"]
-size = Vector2(306.25, 144)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hj5o"]
+size = Vector2(310, 143.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_576qu"]
-size = Vector2(313, 141)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciaia"]
+size = Vector2(302, 132)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_24eyd"]
-size = Vector2(28, 500)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdjbv"]
+size = Vector2(310, 131)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n823j"]
-size = Vector2(28, 526)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkqxi"]
+size = Vector2(24, 497)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gonds"]
-size = Vector2(308, 140)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfymd"]
-size = Vector2(285, 133)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rsjd"]
+size = Vector2(31, 500)
 
 [node name="BackgroundScene" type="Node2D"]
 script = ExtResource("1_rhn7e")
@@ -28,46 +25,106 @@ script = ExtResource("1_rhn7e")
 position = Vector2(513, 385)
 texture = ExtResource("1_fisyn")
 
-[node name="Area2D1" type="Area2D" parent="."]
-position = Vector2(325, 71)
+[node name="RigidBody2D1" type="RigidBody2D" parent="."]
+position = Vector2(321, 73)
+gravity_scale = 0.0
 
-[node name="CollisionArea1" type="CollisionShape2D" parent="Area2D1"]
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_djscb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D1"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_3hj5o")
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(701, 71)
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(703, 73)
+gravity_scale = 0.0
 
-[node name="CollisionArea2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(2, 1)
-shape = SubResource("RectangleShape2D_576qu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_3hj5o")
 
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2(176, 394)
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(317, 700)
+gravity_scale = 0.0
 
-[node name="CollisionArea3" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(-2, -15)
-shape = SubResource("RectangleShape2D_24eyd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(5, 2)
+shape = SubResource("RectangleShape2D_ciaia")
 
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2(856, 404)
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(702, 701)
+gravity_scale = 0.0
 
-[node name="CollisionArea4" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(-4, -3)
-shape = SubResource("RectangleShape2D_n823j")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_gdjbv")
 
-[node name="Area2D5" type="Area2D" parent="."]
-position = Vector2(319, 698)
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(176, 403)
+gravity_scale = 0.0
 
-[node name="CollisionArea5" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_gonds")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+position = Vector2(-2, -14.5)
+shape = SubResource("RectangleShape2D_dkqxi")
 
-[node name="Area2D6" type="Area2D" parent="."]
-position = Vector2(694, 701)
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(853, 403)
+gravity_scale = 0.0
 
-[node name="CollisionArea6" type="CollisionShape2D" parent="Area2D6"]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_tfymd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+position = Vector2(3.5, -11)
+shape = SubResource("RectangleShape2D_6rsjd")
 
-[connection signal="area_entered" from="Area2D1" to="." method="_on_area_2d_1_area_entered"]
+[node name="RigidBody2D7" type="RigidBody2D" parent="."]
+position = Vector2(283, 208)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D7"]
+polygon = PackedVector2Array(-12, 134, 8, 134, 12, 12, 134, 12, 133, -11, -20, -14)
+
+[node name="RigidBody2D8" type="RigidBody2D" parent="."]
+position = Vector2(746, 207)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D8"]
+polygon = PackedVector2Array(-16, 133, 8, 133, 8, -10, -135, -12, -139, 20, -24, 22)
+
+[node name="RigidBody2D9" type="RigidBody2D" parent="."]
+position = Vector2(284, 532)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D9"]
+polygon = PackedVector2Array(-15, -106, 9, -106, 12, -17, 123, -9, 130, 28, -18, 28)
+
+[node name="RigidBody2D10" type="RigidBody2D" parent="."]
+position = Vector2(359, 324)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D10"]
+polygon = PackedVector2Array(58, -18, 58, -48, -16, -46, -16, 51, 62, 51, 57, 21, 13, 21, 16, -13)
+
+[node name="RigidBody2D11" type="RigidBody2D" parent="."]
+position = Vector2(667, 326)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D11"]
+polygon = PackedVector2Array(-61, -16, -61, -48, 9, -48, 11, 49, -68, 54, -66, 19, -23, 17, -23, -18)
+
+[node name="RigidBody2D12" type="RigidBody2D" parent="."]
+position = Vector2(746, 536)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D12"]
+polygon = PackedVector2Array(-16, -109, 13, -109, 13, 19, -142, 21, -145, -15, -21, -15)
+
+[node name="RigidBody2D13" type="RigidBody2D" parent="."]
+position = Vector2(362, 439)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D13"]
+polygon = PackedVector2Array(-19, 44, 10, 44, 10, 19, 57, 19, 56, -10, -12, -11)
+
+[node name="RigidBody2D14" type="RigidBody2D" parent="."]
+position = Vector2(666, 446)
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D14"]
+polygon = PackedVector2Array(10, 33, -11, 33, -13, 12, -58, 12, -58, -17, 10, -16)
