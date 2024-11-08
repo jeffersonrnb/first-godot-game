@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://bs8djgd8a2yfu"]
+
+[ext_resource type="Texture2D" uid="uid://br05e425mp5md" path="res://assets/PNG_Parts&Spriter_Animation/Labyrinths/Lab4/Lab4.png" id="1_fisyn"]
+[ext_resource type="Script" path="res://main/background/background_scene.gd" id="1_rhn7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djscb"]
+size = Vector2(306.25, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_576qu"]
+size = Vector2(313, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24eyd"]
+size = Vector2(28, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n823j"]
+size = Vector2(28, 526)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gonds"]
+size = Vector2(308, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfymd"]
+size = Vector2(285, 133)
+
+[node name="BackgroundScene" type="Node2D"]
+script = ExtResource("1_rhn7e")
+
+[node name="GrassBackground" type="Sprite2D" parent="."]
+position = Vector2(513, 385)
+texture = ExtResource("1_fisyn")
+
+[node name="Area2D1" type="Area2D" parent="."]
+position = Vector2(325, 71)
+
+[node name="CollisionArea1" type="CollisionShape2D" parent="Area2D1"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_djscb")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(701, 71)
+
+[node name="CollisionArea2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_576qu")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(176, 394)
+
+[node name="CollisionArea3" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(-2, -15)
+shape = SubResource("RectangleShape2D_24eyd")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(856, 404)
+
+[node name="CollisionArea4" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(-4, -3)
+shape = SubResource("RectangleShape2D_n823j")
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2(319, 698)
+
+[node name="CollisionArea5" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_gonds")
+
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2(694, 701)
+
+[node name="CollisionArea6" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_tfymd")
+
+[connection signal="area_entered" from="Area2D1" to="." method="_on_area_2d_1_area_entered"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0gs461m85qc8"]
+
+[ext_resource type="Script" path="res://main/ant/ant_area_2d.gd" id="1_c364h"]
+[ext_resource type="Script" path="res://main/ant/ant_scene.gd" id="1_dk577"]
+[ext_resource type="Texture2D" uid="uid://hu3irffm8s5n" path="res://assets/PNG_Parts&Spriter_Animation/Ant1/ant1.png" id="1_wuq4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q144y"]
+size = Vector2(33, 45)
+
+[node name="AntScene" type="Node2D"]
+script = ExtResource("1_dk577")
+
+[node name="AntArea2D" type="Area2D" parent="."]
+position = Vector2(234, 261)
+script = ExtResource("1_c364h")
+
+[node name="AntImage" type="Sprite2D" parent="AntArea2D"]
+position = Vector2(1.59251, -0.00247192)
+rotation = 3.14159
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_wuq4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AntArea2D"]
+position = Vector2(0.592499, -0.00250244)
+shape = SubResource("RectangleShape2D_q144y")
+
+[connection signal="area_entered" from="AntArea2D" to="AntArea2D" method="_on_area_entered"]
