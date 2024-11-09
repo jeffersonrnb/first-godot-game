@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://byhhtfv3rcvq7"]
+[gd_scene load_steps=6 format=3 uid="uid://byhhtfv3rcvq7"]
 
 [ext_resource type="Script" path="res://main/ant_player/ant_player.gd" id="1_2nlo7"]
 [ext_resource type="Texture2D" uid="uid://hu3irffm8s5n" path="res://assets/PNG_Parts&Spriter_Animation/Ant1/Ant1.png" id="1_pajrw"]
+[ext_resource type="AudioStream" uid="uid://bugc32kmaal8h" path="res://assets/Sounds/walking_grass.mp3" id="3_bln27"]
+[ext_resource type="AudioStream" uid="uid://5hfs4t5muude" path="res://assets/Sounds/collision2.mp3" id="4_klvwh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbibd"]
-size = Vector2(31, 25)
+size = Vector2(27, 21)
 
 [node name="AntPlayer" type="CharacterBody2D"]
 position = Vector2(493, 313)
@@ -21,5 +23,13 @@ texture = ExtResource("1_pajrw")
 [node name="CollisionAntPlayer" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_pbibd")
+
+[node name="MovingStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bln27")
+volume_db = 10.0
+parameters/looping = false
+
+[node name="CollisionStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_klvwh")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

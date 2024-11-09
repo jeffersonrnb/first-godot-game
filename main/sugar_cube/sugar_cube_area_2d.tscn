@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx37a6pgqteir"]
+[gd_scene load_steps=4 format=3 uid="uid://dx37a6pgqteir"]
 
 [ext_resource type="Script" path="res://main/sugar_cube/sugar_cube_area_2d.gd" id="1_0trq3"]
 [ext_resource type="Texture2D" uid="uid://bbgohab7xt7td" path="res://assets/PNG_Parts&Spriter_Animation/SugarCube1/SugarCube1.png" id="1_7ojh3"]
+[ext_resource type="AudioStream" uid="uid://benknqafib3v4" path="res://assets/Sounds/8_bit_success.mp3" id="3_lmgaf"]
 
 [node name="SugarCubeArea2D" type="Area2D"]
 script = ExtResource("1_0trq3")
@@ -12,5 +13,8 @@ texture = ExtResource("1_7ojh3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-20, 10, 1, 21, 20, 10, 19, -12, -1, -21, -21, -10)
+
+[node name="SugarCubeStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lmgaf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

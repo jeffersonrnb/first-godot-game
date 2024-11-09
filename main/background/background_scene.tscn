@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs8djgd8a2yfu"]
+[gd_scene load_steps=9 format=3 uid="uid://bs8djgd8a2yfu"]
 
 [ext_resource type="Texture2D" uid="uid://br05e425mp5md" path="res://assets/PNG_Parts&Spriter_Animation/Labyrinths/Lab4/Lab4.png" id="1_fisyn"]
 [ext_resource type="Script" path="res://main/background/background_scene.gd" id="1_rhn7e"]
+[ext_resource type="AudioStream" uid="uid://b8r2g8qjttmq7" path="res://assets/Sounds/background2.mp3" id="3_04smm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hj5o"]
 size = Vector2(310, 143.5)
@@ -128,3 +129,7 @@ gravity_scale = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D14"]
 polygon = PackedVector2Array(10, 33, -11, 33, -13, 12, -58, 12, -58, -17, 10, -16)
+
+[node name="BackgroundStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_04smm")
+volume_db = -4.0
